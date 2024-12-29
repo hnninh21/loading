@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    /*font-family: sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: lightskyblue;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+.loading{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateX(60deg);
+}
+@keyframes animate {
+    0% , 100% {
+        transform: translateZ(-150px);
+        color: black;
+    }
+    50% {
+        transform: translateZ(150px);
+        color: aliceblue;
+    }
+}
+@keyframes word{
+    0% , 100% {
+        color: aliceblue;
+    }
+    50% {
+        color: black;
+    }
+}
+.loadingword{
+    position: absolute;
+    font-family: sans-serif;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateX(60deg);
+    animation: word 3s ease-in-out infinite ;
+}
+.loading span{
+    position: absolute;
+    display: block;
+    border: 3px solid ;
+    box-sizing: border-box;
+    border-radius: 50%;
+    animation: animate 3s ease-in-out infinite ;
+}
+.loading span:nth-child(1){
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation-delay: 0.1s;
+}
+.loading span:nth-child(2){
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    animation-delay: 0.2s;
+}
+.loading span:nth-child(3){
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    animation-delay: 0.3s;
+}
+.loading span:nth-child(4){
+    top: 60px;
+    left: 60px;
+    right: 60px;
+    bottom: 60px;
+    animation-delay: 0.4s;
+}
+.loading span:nth-child(5){
+    top: 80px;
+    left: 80px;
+    right: 80px;
+    bottom: 80px;
+    animation-delay: 0.5s;
+}
